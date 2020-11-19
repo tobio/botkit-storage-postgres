@@ -27,7 +27,7 @@
   "homepage": "https://github.com/tobio/botkit-storage-postgres#readme",
   "dependencies": {
     "co": "^4.6.0",
-    "pg": "^6.1.0"
+    "pg": "^8.5.1"
   },
   "engines": {
     "node": ">=6.7"
