@@ -1,0 +1,11 @@
+version: "2.4"
+
+services:
+    postgres:
+        image: postgres:alpine
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_USER: botkit
+            POSTGRES_PASSWORD: botkit
+            POSTGRES_DB: botkit_test

@@ -4,7 +4,11 @@
   "description": "Postgres storage driver for botkit",
   "main": "src/index.js",
   "scripts": {
-    "test": "node ./tests/index.js"
+    "db": "docker-compose up -d",
+    "wait-for-db": "while ! docker-compose logs | grep 'database system is ready to accept connections'; do sleep 0.1; done;",
+    "down": "docker-compose down",
+    "test": "node ./tests/index.js",
+    "oneshot": "$npm_execpath db && $npm_execpath wait-for-db && $npm_execpath test && $npm_execpath down"
   },
   "repository": {
     "type": "git",
